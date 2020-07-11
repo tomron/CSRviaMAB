@@ -92,15 +92,16 @@ optional arguments:
 
 ## Results
 
-Our model achieves the following performance on :
+Average utility per round for different transfer costs (0, 0.4, 0.8) and different fairness functions - uniform, linear and softmax.
+Each R-O instance had six arms (K=6) with expected reward - 0.2, 0.35, 0.5, 0.65, 0.8 and 0.9 and varying horizons - 1K, 5K, 10K, 50K, 100K and 200K. We used UCB1 as the black box algorithm _ALG_ in  _Self-regulated Utility Maximization_
 
-### [Image Classification on ImageNet](https://paperswithcode.com/sota/image-classification-on-imagenet)
 
-| Model name         | Top 1 Accuracy  | Top 5 Accuracy |
+
+| transfer cost = 0         | transfer cost = 0.4  | transfer cost = 0.8 |
 | ------------------ |---------------- | -------------- |
-| My awesome model   |     85%         |      95%       |
+| [][resources/lam_0.0.jpg]   |     [][resources/lam_0.4.jpg]         |     [][resources/lam_0.8.jpg]       |
 
-> 📋Include a table of results from your paper, and link back to the leaderboard for clarity and context. If your main result is a figure, include that figure and link to the command or notebook to reproduce it. 
+
 
 
 ## Contributing
