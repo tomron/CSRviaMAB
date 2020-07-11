@@ -1,0 +1,54 @@
+\documentclass[tikz]{standalone}
+\usepackage{pgfplots, pgfplotstable}
+
+\pgfplotsset{every tick label/.append style={font=\large}}
+
+\unless\ifdefined\lam
+\def\lam{0.0}
+\fi
+
+\unless\ifdefined\funcName
+\def\funcName{Softmax}
+\fi
+
+\unless\ifdefined\IncludeLegend
+\def\IncludeLegend{0}
+\fi
+
+\unless\ifdefined\resultsDir
+\def\resultsDir{..}
+\fi
+
+
+\begin{document}
+
+\begin{tikzpicture}
+    \pgfplotstableread[col sep=comma]{\resultsDir/\funcName_\lam_pulls_dist.csv}{\loadedtable}
+
+\begin{axis}[
+    ybar stacked,   % Stacked horizontal bars
+    ymin=0,         % Start x axis at 0
+    xtick=data,     % Use as many tick labels as y coordinates
+    y label style={at={(0.02,0.5),font=\large}},
+    x label style={at={(0.5,0.02),font=\large}},
+    legend style={anchor=south west,font=\large,legend columns=-1,at={(0.01,0.01)}},
+    xticklabels from table={\loadedtable}{T},  % Get the labels from the Label column of the \datatable
+    xlabel=Horizon,
+    ylabel=Pulls distribution,
+    ytick style={draw=none},
+    label style={font=\large},
+    ytick={0,0.25,0.5,0.75,1},
+    ]
+    \addplot table [y=norm_approx, meta=T,x expr=\coordindex] {\loadedtable};   % "First" column against the data index
+    % \addplot [fill=fApproxColor] table [y=norm_f_approx, meta=T,x expr=\coordindex] {\loadedtable};
+    \addplot table [y=norm_opportunities_rounds, meta=T,x expr=\coordindex] {\loadedtable};
+    \addplot table [y=norm_alg_rounds, meta=T,x expr=\coordindex] {\loadedtable};
+
+{\ifnum\IncludeLegend=1{
+    \legend{1+2,3,4}
+}\fi}
+
+\end{axis}
+\end{tikzpicture}
+\end{document}
+
