@@ -99,7 +99,7 @@ Each R-O instance had six arms (K=6) with expected reward - 0.2, 0.35, 0.5, 0.65
 
 | transfer cost = 0         | transfer cost = 0.4  | transfer cost = 0.8 |
 | ------------------ |---------------- | -------------- |
-| [][resources/lam_0.0.jpg]   |     [][resources/lam_0.4.jpg]         |     [][resources/lam_0.8.jpg]       |
+| [](resources/lam_0.0.jpg)   |     [](resources/lam_0.4.jpg)         |     [](resources/lam_0.8.jpg)       |
 
 
 
