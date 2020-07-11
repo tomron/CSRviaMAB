@@ -93,15 +93,17 @@ optional arguments:
 ## Results
 
 Average utility per round for different transfer costs (0, 0.4, 0.8) and different fairness functions - uniform, linear and softmax.
-Each R-O instance had six arms (K=6) with expected reward - 0.2, 0.35, 0.5, 0.65, 0.8 and 0.9 and varying horizons - 1K, 5K, 10K, 50K, 100K and 200K. We used UCB1 as the black box algorithm _ALG_ in  _Self-regulated Utility Maximization_
-
-
+Each R-O instance had six arms (K=6) with expected reward - 0.2, 0.35, 0.5, 0.65, 0.8 and 0.95 and varying horizons - 1K, 5K, 10K, 50K, 100K and 200K. Each experiment was executed 200 times. We used UCB1 as the black box algorithm _ALG_ in  _Self-regulated Utility Maximization_.
 
 | transfer cost = 0         | transfer cost = 0.4  | transfer cost = 0.8 |
 | ------------------ |---------------- | -------------- |
-| [](resources/lam_0.0.jpg)   |     [](resources/lam_0.4.jpg)         |     [](resources/lam_0.8.jpg)       |
+| ![lam_0.0](/resources/lam_0.0.jpg)   |     ![lam_0.4](/resources/lam_0.4.jpg)      |     ![lam_0.8](/resources/lam_0.8.jpg)       |
 
 
+Round distributions per phase for softmax
+| transfer cost = 0         | transfer cost = 0.4  | transfer cost = 0.8 |
+| ------------------ |---------------- | -------------- |
+| ![lam_0.0](/resources/pull_dist_0.0_Softmax.jpg)   |     ![lam_0.4](/resources/pull_dist_0.4_Softmax.jpg)      |     ![lam_0.8](/resources/pull_dist_0.8_Softmax.jpg)       |
 
 
 ## Contributing
