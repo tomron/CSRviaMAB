@@ -1,7 +1,7 @@
 
 # Corporate Social Responsibility via Multi-Armed Bandits
 
-This repository is the official implementation of [Corporate Social Responsibility via Multi-Armed Bandits](https://tbd). 
+This repository is the official implementation of [Corporate Social Responsibility via Multi-Armed Bandits](https://github.com/tomron/CSRviaMAB/blob/master/CSRviaMAB.pdf). 
 
 >We propose a multi-armed bandit setting where each arm corresponds to a subpopulation, and pulling an arm is equivalent to granting an opportunity to this subpopulation. In this setting the decision-maker's fairness policy governs the number of opportunities each subpopulation should receive, which typically depends on the (unknown) reward from granting an opportunity to this subpopulation. The decision-maker can decide whether to provide these opportunities or pay a pre-defined monetary value for every withheld opportunity. The decision-maker's objective is to maximize her utility, which is the sum of rewards minus the cost of withheld opportunities. We provide a no-regret algorithm that maximizes the decision-maker's utility and complement our analysis with an almost-tight lower bound. Finally, we discuss the fairness policy and demonstrate its downstream implications on the utility and opportunities via simulations.
 
